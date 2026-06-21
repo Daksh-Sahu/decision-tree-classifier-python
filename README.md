@@ -320,7 +320,7 @@ cd decision-tree-classifier
 
 ## ▶️ Running the Project
 
-### ☁️ Google Colab
+### ☁️ Google Colab (Preferred)
 
 1. Open notebook.
 2. Upload dataset in Files section.
