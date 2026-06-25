@@ -246,11 +246,17 @@ Best Attribute Selected = Outlook
 
 ### Iteration 1
 
-![Iteration 1](images/tree_iteration_1.png)
+![Iteration 1](images/tree_iteration1.png)
 
 ### Final Decision Tree
 
 ![Final Tree](images/final_tree.png)
+
+
+### Sample Prediction
+
+![Sample Prediction](images/sample_prediction.png)
+
 
 ---
 
