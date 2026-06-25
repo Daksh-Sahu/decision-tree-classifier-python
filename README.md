@@ -400,8 +400,15 @@ reports/sample_output.pdf
 
 ## 👨‍💻 Author
 
-**Daksh Sahu**
+Developed with Python with Google Colab. <br>
+If you found this project useful, consider giving it a ⭐ on GitHub!
 
-Python Developer • Data Science Enthusiast • Machine Learning Learner
+**Daksh S** <br>
+📧 **Email:** [daksh.s.blr@gmail.com](mailto:daksh.s.blr@gmail.com) <br>
+💼 **LinkedIn:** https://www.linkedin.com/in/Daksh-Sahu-blr2023 
 
-⭐ If you found this project useful, consider starring the repository.
+
+---
+
+## 📜 License
+Feel free to use, modify, and distribute it for educational and personal purposes.
