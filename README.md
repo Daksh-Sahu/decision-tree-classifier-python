@@ -68,15 +68,10 @@ The implementation includes:
 ## 🎯 Project Objectives
 
 🔹 Understand the mathematical foundation of Decision Trees
-
 🔹 Implement ID3 from scratch
-
 🔹 Visualize tree growth after every iteration
-
 🔹 Generate human-readable decision rules
-
 🔹 Classify unseen data samples
-
 🔹 Learn Information Theory concepts used in Machine Learning
 
 ---
@@ -169,31 +164,31 @@ Gain(S,A) = Entropy(S) − Weighted Entropy(A)
 ## ⚙️ Algorithm Workflow
 
 ```text
-Dataset
-   │
-   ▼
-Calculate Entropy
-   │
-   ▼
-Calculate Information Gain
-   │
-   ▼
-Select Best Attribute
-   │
-   ▼
-Split Dataset
-   │
-   ▼
-Create Tree Node
-   │
-   ▼
-Repeat Recursively
-   │
-   ▼
-Final Decision Tree
-   │
-   ▼
-Prediction
+ Dataset
+    │
+    ▼
+ Calculate Entropy
+    │
+    ▼
+ Calculate Information Gain
+    │
+    ▼
+ Select Best Attribute
+    │
+    ▼
+ Split Dataset
+    │
+    ▼
+ Create Tree Node
+    │
+    ▼
+ Repeat Recursively
+    │
+    ▼
+ Final Decision Tree
+    │
+    ▼
+ Prediction
 ```
 
 ---
@@ -293,20 +288,23 @@ Best Attribute Selected = Outlook
 ## 📂 Project Structure
 
 ```text
-ID3-Decision-Tree-From-Scratch/
+decision-tree-classifier-python/
 │
-├── data/
-│   └── dataset.xlsx
-│
+├── datasets/
+│   ├── buys_computer.xlsx
+│   ├── job_offer.xlsx
+│   ├── play_tennis.xlsx
+│   └── profit.xlsx
+│ 
 ├── notebooks/
-│   └── ID3_Decision_Tree.ipynb
+│   └── ID3_decision_tree.ipynb
 │
 ├── reports/
-│   ├── Project_Report.pdf
-│   └── Sample_Output.pdf
+│   ├── project_report.pdf
+│   └── sample_output.pdf
 │
 ├── images/
-│   ├── tree_iteration_1.png
+│   ├── tree_iteration1.png
 │   └── final_tree.png
 │
 └── README.md
