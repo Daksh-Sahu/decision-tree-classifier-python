@@ -32,8 +32,6 @@ Builds a Decision Tree from scratch using **Entropy** and **Information Gain**, 
 * [🛠️ Technologies Used](#️-technologies-used)
 * [📦 Requirements](#-requirements)
 * [▶️ Running the Project](#️-running-the-project)
-  * [☁️ Google Colab](#️-google-colab)
-
 * [🔍 Sample Classification](#-sample-classification)
 * [📄 Project Report](#-project-report)
 * [🚀 Future Enhancements](#-future-enhancements)
@@ -378,13 +376,13 @@ Predicted Class: Yes
 📘 Detailed implementation report:
 
 ```text
-reports/Project_Report.pdf
+reports/project_report.pdf
 ```
 
 📑 Sample execution and screenshots:
 
 ```text
-reports/Sample_Output.pdf
+reports/sample_output.pdf
 ```
 
 ---
