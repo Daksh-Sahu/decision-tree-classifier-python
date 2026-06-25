@@ -31,12 +31,9 @@ Builds a Decision Tree from scratch using **Entropy** and **Information Gain**, 
 * [📂 Project Structure](#-project-structure)
 * [🛠️ Technologies Used](#️-technologies-used)
 * [📦 Requirements](#-requirements)
-* [🚀 Installation](#-installation)
 * [▶️ Running the Project](#️-running-the-project)
-
   * [☁️ Google Colab](#️-google-colab)
-  * [📓 Jupyter Notebook](#-jupyter-notebook)
-  * [💻 Local Python Environment](#-local-python-environment)
+
 * [🔍 Sample Classification](#-sample-classification)
 * [📄 Project Report](#-project-report)
 * [🚀 Future Enhancements](#-future-enhancements)
@@ -116,9 +113,13 @@ The implementation includes:
 Automatically generates rules such as:
 
 ```text
-IF Outlook = Sunny
-AND Humidity = High
-THEN Play = No
+IF Outlook  = Sunny THEN:
+    IF Humidity = High THEN PlayTennis = No
+    IF Humidity = Normal THEN PlayTennis = Yes
+IF Outlook  = Overcast THEN PlayTennis = Yes
+IF Outlook  = Rain THEN:
+    IF  Wind  = Weak THEN PlayTennis = Yes
+    IF  Wind  = Strong THEN PlayTennis = No
 ```
 
 ### 🎨 Visualization
@@ -203,12 +204,23 @@ The dataset should be provided in Excel format.
 
 ### Example Dataset
 
-| ID | Outlook  | Temperature | Humidity | Windy | Play |
-| -- | -------- | ----------- | -------- | ----- | ---- |
-| 1  | Sunny    | Hot         | High     | False | No   |
-| 2  | Sunny    | Hot         | High     | True  | No   |
-| 3  | Overcast | Hot         | High     | False | Yes  |
-| 4  | Rain     | Mild        | High     | False | Yes  |
+| Day | Outlook  | Temperature | Humidity | Wind   | Play |
+| --- | -------- | ----------- | -------- | ------ | ---- |
+| 1   | Sunny    | Hot         | High     | Weak   | No   |
+| 2   | Sunny    | Hot         | High     | Strong | No   |
+| 3   | Overcast | Hot         | High     | Weak   | Yes  |
+| 4   | Rain     | Mild        | High     | Weak   | Yes  |
+| 5   | Rain     | Cool        | Normal   | Weak   | Yes  |
+| 6   | Rain     | Cool        | Normal   | Strong | No   |
+| 7   | Overcast | Cool        | Normal   | Strong | Yes  |
+| 8   | Sunny    | Mild        | High     | Weak   | No   |
+| 9   | Sunny    | Cool        | Normal   | Weak   | Yes  |
+| 10  | Rain     | Mild        | Normal   | Weak   | Yes  |
+| 11  | Sunny    | Mild        | Normal   | Strong | Yes  |
+| 12  | Overcast | Mild        | High     | Strong | Yes  |
+| 13  | Overcast | Hot         | Normal   | Weak   | Yes  |
+| 14  | Rain     | Mild        | High     | Strong | No   |
+
 
 ### Rules
 
@@ -229,9 +241,27 @@ Entropy of Dataset = 0.9403
 ### Information Gain
 
 ```text
-Gain(Outlook) = 0.2467
+Attribute: Outlook 
+Entropy(Sunny) = 0.971
+Entropy(Overcast) = 0.0
+Entropy(Rain) = 0.971
+Gain(Outlook ) = 0.2467
+
+Attribute: Temp 
+Entropy(Hot) = 1.0
+Entropy(Mild) = 0.9183
+Entropy(Cool) = 0.8113
+Gain(Temp ) = 0.0292
+
+Attribute: Humidity
+Entropy(High) = 0.9852
+Entropy(Normal) = 0.5917
 Gain(Humidity) = 0.1518
-Gain(Windy) = 0.0481
+
+Attribute:  Wind 
+Entropy(Weak) = 0.8113
+Entropy(Strong) = 1.0
+Gain( Wind ) = 0.0481
 ```
 
 ### Best Attribute
@@ -279,9 +309,7 @@ ID3-Decision-Tree-From-Scratch/
 │   ├── tree_iteration_1.png
 │   └── final_tree.png
 │
-├── requirements.txt
-│
-├── README.md
+└── README.md
 
 ```
 
@@ -313,16 +341,6 @@ math
 
 ---
 
-## 🚀 Installation
-
-```bash
-git clone https://github.com/Daksh-Sahu/decision-tree-classifier.git
-
-cd decision-tree-classifier
-
-```
-
----
 
 ## ▶️ Running the Project
 
@@ -333,51 +351,21 @@ cd decision-tree-classifier
 3. Run all cells.
 4. Enter file path.
 
-Example:
-
-```python
-/content/dataset.xlsx
-```
-
-### 📓 Jupyter Notebook
-
-```bash
-jupyter notebook
-```
-
-Open:
-
-```text
-notebooks/ID3_Decision_Tree.ipynb
-```
-
-Dataset path:
-
-```python
-data/dataset.xlsx
-```
-
-### 💻 Local Python Environment
-
-```bash
-python id3_decision_tree.py
-```
-
 ---
 
 ## 🔍 Sample Classification
 
 ```text
-Enter value for Outlook: Sunny
-Enter value for Temperature: Cool
-Enter value for Humidity: High
-Enter value for Windy: False
+Enter value for Outlook: sunny
+Enter value for Temperature: cool
+Enter value for Humidity: normal
+Enter value for Wind: weak
 ```
 
 Output:
 
 ```text
-Predicted Class: No
+Predicted Class: Yes
 ```
 
 ---
@@ -404,7 +392,6 @@ reports/Sample_Output.pdf
 * 📊 Accuracy Evaluation
 * 🌐 Web Application Interface
 * 🖥️ Desktop GUI
-* 📄 PDF Report Export
 * 📉 Support for Continuous Features
 * 🤖 Comparison with Scikit-Learn
 
