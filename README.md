@@ -68,10 +68,15 @@ The implementation includes:
 ## 🎯 Project Objectives
 
 🔹 Understand the mathematical foundation of Decision Trees
+
 🔹 Implement ID3 from scratch
+
 🔹 Visualize tree growth after every iteration
+
 🔹 Generate human-readable decision rules
+
 🔹 Classify unseen data samples
+
 🔹 Learn Information Theory concepts used in Machine Learning
 
 ---
